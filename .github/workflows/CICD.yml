@@ -38,7 +38,8 @@ jobs:
       url: 'http://test.myapp.com'
     steps:
       - name: Deploy
-        run: return 1
+        run: echo I am deploying! #return 1
+        
             
   DeployProd:
     name: Deploy to Production 
