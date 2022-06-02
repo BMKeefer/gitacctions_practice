@@ -33,6 +33,8 @@ jobs:
           pull-request-number: github.event.number
           comment: Auto-closing pull request
           delete-branch: false
+          token: GITHUB_TOKEN
+          repository: gitactons_practice
     
   DeployStaging:
     name: Deploy to Staging 
