@@ -27,6 +27,12 @@ jobs:
     steps:
       - name: Deploy
         run: return 1
+      - name: Close Pull
+        uses: peter-evans/close-pull@v2
+        with:
+          pull-request-number: github.event.number
+          comment: Auto-closing pull request
+          delete-branch: false
     
   DeployStaging:
     name: Deploy to Staging 
