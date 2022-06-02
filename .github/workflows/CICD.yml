@@ -25,16 +25,8 @@ jobs:
       name: Development
       url: 'http://dev.myapp.com'
     steps:
-      - name: Close Pull
-        uses: peter-evans/close-pull@v2
-        with:
-          pull-request-number: github.event.number
-          comment: Auto-closing pull request
-          delete-branch: false
-          token: GITHUB_TOKEN
-          repository: gitactons_practice
       - name: Deploy
-        run: return 1
+        run: echo I am deploying!
     
   DeployStaging:
     name: Deploy to Staging 
